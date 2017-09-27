@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomTransitionViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeimage" translatesAutoresizingMaskIntoConstraints="NO" id="IUq-hW-Dgw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bd-oU-0eR">
+                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="fDx-Ph-EvQ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="actionViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AQq-fJ-w01"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.80000000000000004" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="7bd-oU-0eR" secondAttribute="trailing" id="3fd-Q5-mzW"/>
+                            <constraint firstAttribute="bottom" secondItem="7bd-oU-0eR" secondAttribute="bottom" id="Au5-9j-BCn"/>
+                            <constraint firstAttribute="bottom" secondItem="IUq-hW-Dgw" secondAttribute="bottom" id="MSH-hm-0eC"/>
+                            <constraint firstItem="IUq-hW-Dgw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RWH-Jk-e4i"/>
+                            <constraint firstItem="7bd-oU-0eR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="d2X-ec-Cc0"/>
+                            <constraint firstAttribute="trailing" secondItem="IUq-hW-Dgw" secondAttribute="trailing" id="ivl-gN-CTw"/>
+                            <constraint firstItem="IUq-hW-Dgw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lXX-gj-PoA"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Custom View Controller-->
+        <scene sceneID="q0x-Py-Ssy">
+            <objects>
+                <viewController storyboardIdentifier="CustomViewController" id="TsW-fv-w42" customClass="CustomViewController" customModule="CustomTransitionViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yns-Qx-9ig"/>
+                        <viewControllerLayoutGuide type="bottom" id="KOx-U0-CG1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qN1-UB-iXb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCE-rw-ttB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="actionViewController:" destination="TsW-fv-w42" eventType="touchUpInside" id="Jag-Af-3VH"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F4z-bv-zqf" userLabel="Card View Right" customClass="CardView" customModule="CustomTransitionViewController" customModuleProvider="target">
+                                <rect key="frame" x="195" y="225" width="160" height="160"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="F4z-bv-zqf" secondAttribute="height" multiplier="1:1" id="DsW-Q4-VTl"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XSv-RW-wLg" userLabel="Card View Left" customClass="CardView" customModule="CustomTransitionViewController" customModuleProvider="target">
+                                <rect key="frame" x="20" y="225.5" width="160" height="160"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XSv-RW-wLg" secondAttribute="height" multiplier="1:1" id="94g-Nu-QQk"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xKq-3g-hix" userLabel="Card View Volume" customClass="CardView" customModule="CustomTransitionViewController" customModuleProvider="target">
+                                <rect key="frame" x="282.5" y="400" width="72.5" height="160.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="go9-Q6-vtC" userLabel="Card View Brilho" customClass="CardView" customModule="CustomTransitionViewController" customModuleProvider="target">
+                                <rect key="frame" x="195" y="400.5" width="72.5" height="160"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAC-PR-534" userLabel="Card View Silence" customClass="CardView" customModule="CustomTransitionViewController" customModuleProvider="target">
+                                <rect key="frame" x="107" y="400.5" width="73" height="72"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ls-Tb-0TH" userLabel="Card View Rotate" customClass="CardView" customModule="CustomTransitionViewController" customModuleProvider="target">
+                                <rect key="frame" x="20" y="400.5" width="73" height="72"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcl-bs-pLk" userLabel="Card View Mirror" customClass="CardView" customModule="CustomTransitionViewController" customModuleProvider="target">
+                                <rect key="frame" x="20" y="487.5" width="160" height="72.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wib-LC-DTT" customClass="CardView" customModule="CustomTransitionViewController" customModuleProvider="target">
+                                <rect key="frame" x="20" y="575" width="72.5" height="72"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Wib-LC-DTT" secondAttribute="height" multiplier="1:1" id="ZuQ-zw-VcJ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4JC-Hl-gxr" customClass="CardView" customModule="CustomTransitionViewController" customModuleProvider="target">
+                                <rect key="frame" x="107.5" y="575" width="72.5" height="72.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4JC-Hl-gxr" secondAttribute="height" multiplier="1:1" id="gNq-mw-Hit"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z6a-F7-6rF" customClass="CardView" customModule="CustomTransitionViewController" customModuleProvider="target">
+                                <rect key="frame" x="195" y="575.5" width="72.5" height="72"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Z6a-F7-6rF" secondAttribute="height" multiplier="1:1" id="iS8-6M-HZc"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UvB-1x-Ff0" customClass="CardView" customModule="CustomTransitionViewController" customModuleProvider="target">
+                                <rect key="frame" x="282.5" y="575.5" width="72.5" height="72.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UvB-1x-Ff0" secondAttribute="height" multiplier="1:1" id="bQx-GK-MHQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="cCE-rw-ttB" secondAttribute="bottom" id="2BX-jB-XyI"/>
+                            <constraint firstItem="xKq-3g-hix" firstAttribute="leading" secondItem="UvB-1x-Ff0" secondAttribute="leading" id="4Ah-O3-KZr"/>
+                            <constraint firstItem="go9-Q6-vtC" firstAttribute="top" secondItem="rAC-PR-534" secondAttribute="top" id="4Vh-yI-49I"/>
+                            <constraint firstItem="F4z-bv-zqf" firstAttribute="trailing" secondItem="xKq-3g-hix" secondAttribute="trailing" id="5HP-v5-RGp"/>
+                            <constraint firstItem="XSv-RW-wLg" firstAttribute="leading" secondItem="7Ls-Tb-0TH" secondAttribute="leading" id="6vJ-kC-Jrf"/>
+                            <constraint firstItem="cCE-rw-ttB" firstAttribute="leading" secondItem="qN1-UB-iXb" secondAttribute="leading" id="AD9-Hv-kEf"/>
+                            <constraint firstItem="4JC-Hl-gxr" firstAttribute="width" secondItem="Wib-LC-DTT" secondAttribute="width" id="Ac0-Mc-Ble"/>
+                            <constraint firstItem="rAC-PR-534" firstAttribute="leading" secondItem="dcl-bs-pLk" secondAttribute="centerX" constant="7" id="DWD-Mg-GlO"/>
+                            <constraint firstItem="go9-Q6-vtC" firstAttribute="trailing" secondItem="Z6a-F7-6rF" secondAttribute="trailing" id="FtP-q3-cEG"/>
+                            <constraint firstItem="Wib-LC-DTT" firstAttribute="top" secondItem="dcl-bs-pLk" secondAttribute="bottom" constant="15" id="G6j-Pi-HL9"/>
+                            <constraint firstItem="XSv-RW-wLg" firstAttribute="trailing" secondItem="dcl-bs-pLk" secondAttribute="trailing" id="GeX-GK-7wK"/>
+                            <constraint firstItem="dcl-bs-pLk" firstAttribute="leading" secondItem="Wib-LC-DTT" secondAttribute="leading" id="Gkm-Kb-oSQ"/>
+                            <constraint firstItem="cCE-rw-ttB" firstAttribute="top" secondItem="qN1-UB-iXb" secondAttribute="top" id="HRH-g7-e3z"/>
+                            <constraint firstItem="Z6a-F7-6rF" firstAttribute="top" secondItem="go9-Q6-vtC" secondAttribute="bottom" constant="15" id="JWr-do-pI2"/>
+                            <constraint firstItem="rAC-PR-534" firstAttribute="centerY" secondItem="7Ls-Tb-0TH" secondAttribute="centerY" id="L4u-zg-FKY"/>
+                            <constraint firstItem="UvB-1x-Ff0" firstAttribute="centerY" secondItem="Z6a-F7-6rF" secondAttribute="centerY" id="LJs-Re-fR8"/>
+                            <constraint firstItem="4JC-Hl-gxr" firstAttribute="leading" secondItem="Wib-LC-DTT" secondAttribute="trailing" constant="15" id="LUN-6L-MCV"/>
+                            <constraint firstItem="UvB-1x-Ff0" firstAttribute="top" secondItem="xKq-3g-hix" secondAttribute="bottom" constant="15" id="NSS-kS-d9p"/>
+                            <constraint firstItem="Wib-LC-DTT" firstAttribute="leading" secondItem="qN1-UB-iXb" secondAttribute="leading" constant="20" id="O7x-g7-z7J"/>
+                            <constraint firstItem="7Ls-Tb-0TH" firstAttribute="top" secondItem="XSv-RW-wLg" secondAttribute="bottom" constant="15" id="OLA-vL-0Tr"/>
+                            <constraint firstItem="dcl-bs-pLk" firstAttribute="trailing" secondItem="4JC-Hl-gxr" secondAttribute="trailing" id="P9b-Nb-dhx"/>
+                            <constraint firstItem="Z6a-F7-6rF" firstAttribute="leading" secondItem="4JC-Hl-gxr" secondAttribute="trailing" constant="15" id="QE0-dZ-4bh"/>
+                            <constraint firstItem="xKq-3g-hix" firstAttribute="top" secondItem="F4z-bv-zqf" secondAttribute="bottom" constant="15" id="QSa-4o-jrG"/>
+                            <constraint firstAttribute="trailing" secondItem="UvB-1x-Ff0" secondAttribute="trailing" constant="20" id="Tg7-rh-Xvo"/>
+                            <constraint firstItem="dcl-bs-pLk" firstAttribute="top" secondItem="7Ls-Tb-0TH" secondAttribute="bottom" constant="15" id="Vsc-tb-TV4"/>
+                            <constraint firstItem="go9-Q6-vtC" firstAttribute="leading" secondItem="Z6a-F7-6rF" secondAttribute="leading" id="Wvc-ng-MtE"/>
+                            <constraint firstAttribute="bottom" secondItem="Wib-LC-DTT" secondAttribute="bottom" constant="20" id="Y4Z-c9-FUB"/>
+                            <constraint firstItem="rAC-PR-534" firstAttribute="trailing" secondItem="dcl-bs-pLk" secondAttribute="trailing" id="ZOw-ro-EOG"/>
+                            <constraint firstItem="Z6a-F7-6rF" firstAttribute="centerY" secondItem="4JC-Hl-gxr" secondAttribute="centerY" id="a5h-Ww-P1r"/>
+                            <constraint firstItem="UvB-1x-Ff0" firstAttribute="leading" secondItem="Z6a-F7-6rF" secondAttribute="trailing" constant="15" id="bss-Ju-EQK"/>
+                            <constraint firstItem="7Ls-Tb-0TH" firstAttribute="height" secondItem="Wib-LC-DTT" secondAttribute="height" id="dX0-ZP-Qt9"/>
+                            <constraint firstItem="UvB-1x-Ff0" firstAttribute="width" secondItem="Z6a-F7-6rF" secondAttribute="width" id="eZs-V4-VQs"/>
+                            <constraint firstItem="7Ls-Tb-0TH" firstAttribute="leading" secondItem="dcl-bs-pLk" secondAttribute="leading" id="kaw-xc-Adr"/>
+                            <constraint firstItem="xKq-3g-hix" firstAttribute="top" secondItem="go9-Q6-vtC" secondAttribute="top" id="mKP-jD-JH6"/>
+                            <constraint firstItem="4JC-Hl-gxr" firstAttribute="centerY" secondItem="Wib-LC-DTT" secondAttribute="centerY" id="mOA-QK-9fi"/>
+                            <constraint firstItem="xKq-3g-hix" firstAttribute="trailing" secondItem="UvB-1x-Ff0" secondAttribute="trailing" id="muT-Jl-DXX"/>
+                            <constraint firstItem="7Ls-Tb-0TH" firstAttribute="trailing" secondItem="dcl-bs-pLk" secondAttribute="centerX" constant="-7" id="nbW-Sv-xKh"/>
+                            <constraint firstAttribute="trailing" secondItem="cCE-rw-ttB" secondAttribute="trailing" id="o1s-Yv-jIQ"/>
+                            <constraint firstItem="F4z-bv-zqf" firstAttribute="leading" secondItem="go9-Q6-vtC" secondAttribute="leading" id="qDd-Fh-dve"/>
+                            <constraint firstItem="dcl-bs-pLk" firstAttribute="height" secondItem="Wib-LC-DTT" secondAttribute="height" id="ts7-D5-Q1I"/>
+                            <constraint firstItem="rAC-PR-534" firstAttribute="height" secondItem="7Ls-Tb-0TH" secondAttribute="height" id="y7Z-1T-USI"/>
+                            <constraint firstItem="Z6a-F7-6rF" firstAttribute="width" secondItem="4JC-Hl-gxr" secondAttribute="width" id="y8l-kx-r3W"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nar-cU-xCX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="689" y="37"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="homeimage" width="750" height="1334"/>
+    </resources>
+</document>
